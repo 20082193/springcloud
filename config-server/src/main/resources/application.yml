@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/20082193/demo/
+          search-paths: repo
+          username: 3080753932@qq.com
+          password: aa201502
+      label: master
+server:
+  port: 8888
+eureka:
+  client:
+    eureka-server-port: 8761
+    eureka-server-d-n-s-name: localhost
+

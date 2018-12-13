@@ -1,0 +1,23 @@
+eureka:
+  client:
+    eureka-server-port: 8761
+    eureka-server-d-n-s-name: localhost
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taotao?useSSL=false&serverTimezone=Hongkong&characterEncoding=utf-8
+    username: root
+    password: aa201502
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+

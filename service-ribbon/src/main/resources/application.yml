@@ -1,0 +1,9 @@
+server:
+  port: 8764
+eureka:
+  client:
+    eureka-server-port: 8761
+    eureka-server-d-n-s-name: localhost
+spring:
+  application:
+    name: service-ribbon
